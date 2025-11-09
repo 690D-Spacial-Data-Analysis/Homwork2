@@ -12,16 +12,23 @@ Paste links from GitHub here:
 ```{r}
 # paste inside the quotations
 
-gpklink=''
-jsonlink=''
+gpklink='https://github.com/690D-Spacial-Data-Analysis/Homwork2/raw/refs/heads/main/Boston_IDW_Map.gpkg'
+
+jsonlink='https://github.com/690D-Spacial-Data-Analysis/Homwork2/raw/refs/heads/main/airbnb_source.geojson'
+
+jsonlinkboston='https://github.com/690D-Spacial-Data-Analysis/Homwork2/raw/refs/heads/main/boston.geojson'
+
+jsonlink3='https://github.com/690D-Spacial-Data-Analysis/Homwork2/raw/refs/heads/main/boston_grid10.geojson'
 ```
 
 Have the maps into R
 ```{r}
 library(sf)
 
-map1=read_sf(gpklink, layer = "usa")
+map1=read_sf(gpklink)
 map2=read_sf(jsonlink)
+map3=read_sf(jsonlinkboston)
+map4=read_sf(jsonlink3)
 ```
 
 See and save plots:
@@ -39,5 +46,14 @@ map2gg=ggplot() + theme_void() + geom_sf(data = map2)
 map2gg
 saveRDS(map2gg,file='map2.rds')
 ```
-
+```{r}
+map3gg=ggplot() + theme_void() + geom_sf(data = map3)
+map3gg
+saveRDS(map3gg,file='map3.rds')
+```
+```{r}
+map4gg=ggplot() + theme_void() + geom_sf(data = map4)
+map4gg
+saveRDS(map4gg,file='map4.rds')
+```
 You are done!
