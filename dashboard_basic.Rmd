@@ -12,11 +12,17 @@ library(flexdashboard) # always
 
 <!-- links -->
 ```{r}
-map1link=
+map1link="https://github.com/690D-Spacial-Data-Analysis/Homwork2/raw/refs/heads/main/map1.rds"
 viz1=url(map1link)
 
-map2link=
+map2link="https://github.com/690D-Spacial-Data-Analysis/Homwork2/raw/refs/heads/main/map2.rds"
 viz2=url(map2link)
+
+map3link="https://github.com/690D-Spacial-Data-Analysis/Homwork2/raw/refs/heads/main/map3.rds"
+viz3=url(map3link)
+
+map4link="https://github.com/690D-Spacial-Data-Analysis/Homwork2/raw/refs/heads/main/map4.rds"
+viz4=url(map4link)
 ```
 
 ## Intro {.sidebar}
@@ -26,14 +32,14 @@ I can give some textual explanation here!
 
 ## Column {data-width="450"}
 
-### GIVE ME A TITLE 1 <!-- a title for plot -->
+### Plot of boston split into grid
 
 ```{r}
 
 readRDS(viz1)
 ```
 
-### GIVE ME A TITLE 2
+### Air Bnb Locations in boston
 
 ```{r}
 
@@ -42,14 +48,14 @@ readRDS(viz2)
 
 ## Column {data-width="550"}
 
-### GIVE ME A TITLE 3
+### Plot of boston
 
 ```{r}
-readRDS(viz1)
+readRDS(viz3)
 ```
 
-### GIVE ME A TITLE 4
+### IDW_10
 
 ```{r}
-readRDS(viz2)
+readRDS(viz4)
 ```
